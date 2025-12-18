@@ -76,7 +76,7 @@ import App from "./App";
  * - Prevents double mounting
  */
 function mountCalculator() {
-  const elements = document.querySelectorAll("[data-react='progressbar']");
+  const elements = document.querySelectorAll("[data-react='webflow_calculator']");
 
   if (!elements.length) return;
 
