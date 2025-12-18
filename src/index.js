@@ -20,7 +20,7 @@ window.Webflow.push(() => {
         // const interest_rate_val = 7.5;
         // const loan_terms_val = 30;
         // const yearly_insurance = 1200;
-
+ 
         const root = ReactDOM.createRoot(el);
         root.render( < React.StrictMode >
             <
