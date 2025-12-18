@@ -3,8 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-window.Webflow = window.Webflow || [];
+let root = ReactDOM.createRoot(document.getElementById('root'));
+window.Webflow = window.Webflow || root.render(
+    <React.StrictMode>
+            <App purchase_price = '750000'
+            down_payment_percent = '12'
+            interest_rate = '21'
+            loan_terms = '12'
+            yearly_insurance ='2500' />
+        </React.StrictMode>
+        );;
 window.Webflow.push(() => {
     const elements = document.querySelectorAll("[data-react='progressbar']");
 
@@ -21,7 +29,7 @@ window.Webflow.push(() => {
         // const loan_terms_val = 30;
         // const yearly_insurance = 1200;
  
-        const root = ReactDOM.createRoot(el);
+        root = ReactDOM.createRoot(el);
         root.render( < React.StrictMode >
             <
             App purchase_price = { purchase_price_val }
