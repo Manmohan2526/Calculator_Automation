@@ -83,6 +83,7 @@ function mountCalculator() {
   elements.forEach((el) => {
     // 🛑 Prevent React error #299 (double mount)
     if (el.dataset.mounted === "true") return;
+    console.log("Mounting React calculator...");
     el.dataset.mounted = "true";
 
     const props = {
@@ -94,6 +95,7 @@ function mountCalculator() {
     };
 
     createRoot(el).render(<App {...props} />);
+    // elements..render(<App {...props} />);
   });
 }
 
