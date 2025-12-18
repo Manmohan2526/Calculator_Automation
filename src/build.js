@@ -3,7 +3,7 @@ import esbuild from "esbuild";
 esbuild.build({
         entryPoints: ["index.js"],
         bundle: true,
-        outfile: "progressbar.bundle.js",
+        outfile: "calculator_build.bundle.js",
         loader: {
             ".js": "jsx",
             ".jsx": "jsx"

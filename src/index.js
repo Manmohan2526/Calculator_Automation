@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
-window.Webflow || = [];
+window.Webflow = window.Webflow || [];
 window.Webflow.push(() => {
     const elements = document.querySelectorAll("[data-react='progressbar']");
 
