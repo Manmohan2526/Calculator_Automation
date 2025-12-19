@@ -141,6 +141,8 @@ const App = (props) => {
         },
     };
 
+    console.log('App component loaded', selectedUnit);
+
     return ( <
         div className = "min-h-screen bg-gray-100 flex items-center justify-center font-sans antialiased" >
         <
