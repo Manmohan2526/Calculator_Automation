@@ -39,7 +39,7 @@ const App = (props) => {
     };
 
     // URL param ingestion is intentionally commented out; uncomment to enable:
-    /*
+    
     useEffect(() => {
       const searchParams = new URLSearchParams(window.location.search);
       const price = searchParams.get('price');
@@ -53,7 +53,7 @@ const App = (props) => {
         setSelectedUnit(unitFromUrl);
       }
     }, []);
-    */
+    
 
     // Expose a global setter for marketing pages to inject pricing dynamically.
     useEffect(() => {
