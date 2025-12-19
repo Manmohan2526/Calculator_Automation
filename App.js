@@ -40,33 +40,33 @@ const App = (props) => {
 
     // URL param ingestion is intentionally commented out; uncomment to enable:
     
-    useEffect(() => {
-      const searchParams = new URLSearchParams(window.location.search);
-      const price = searchParams.get('price');
-      if (!price) return;
-      const unitFromUrl = normalizeUnit({
-        price,
-        unit_id: searchParams.get('unit_id') || searchParams.get('unitId') || '',
-        plan: searchParams.get('plan') || '',
-      });
-      if (unitFromUrl) {
-        setSelectedUnit(unitFromUrl);
-      }
-    }, []);
+    // useEffect(() => {
+    //   const searchParams = new URLSearchParams(window.location.search);
+    //   const price = searchParams.get('price');
+    //   if (!price) return;
+    //   const unitFromUrl = normalizeUnit({
+    //     price,
+    //     unit_id: searchParams.get('unit_id') || searchParams.get('unitId') || '',
+    //     plan: searchParams.get('plan') || '',
+    //   });
+    //   if (unitFromUrl) {
+    //     setSelectedUnit(unitFromUrl);
+    //   }
+    // }, []);
     
 
     // Expose a global setter for marketing pages to inject pricing dynamically.
-    useEffect(() => {
-        window.setCalculatorUnit = (incoming = {}) => {
-            const normalized = normalizeUnit(incoming);
-            if (normalized) {
-                setSelectedUnit(normalized);
-            }
-        };
-        return () => {
-            delete window.setCalculatorUnit;
-        };
-    }, []);
+    // useEffect(() => {
+    //     window.setCalculatorUnit = (incoming = {}) => {
+    //         const normalized = normalizeUnit(incoming);
+    //         if (normalized) {
+    //             setSelectedUnit(normalized);
+    //         }
+    //     };
+    //     return () => {
+    //         delete window.setCalculatorUnit;
+    //     };
+    // }, []);
 
     // Effects
     useEffect(() => {
