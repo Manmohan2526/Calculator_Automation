@@ -10,8 +10,8 @@ const App = (props) => {
     // Default price so the calculator works out of the box; adjust as needed.
     const [selectedUnit, setSelectedUnit] = useState({
         price: props.purchase_price,
-        unit_id: '',
-        plan: '',
+        unit_id: props.propertyId,
+        plan: props.propertyPlan,
     });
 
     // user inputs

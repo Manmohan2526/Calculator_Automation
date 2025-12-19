@@ -92,6 +92,8 @@ function mountCalculator() {
       interest_rate: Number(el.dataset.interest_rate_val || 0),
       loan_terms: Number(el.dataset.loan_terms_val || 0),
       yearly_insurance: Number(el.dataset.yearly_insurance || 0),
+      propertyId: Number(el.dataset.propertyId || ''),
+      propertyPlan: Number(el.dataset.propertyPlan || ''),
     };
 
     createRoot(el).render(<App {...props} />);
